@@ -1,0 +1,130 @@
+/* DEVELOPER: Riya Menon, IS117 007, Fall 2025 */
+
+/* General Styling */
+
+:root {
+    --primary-color: #007bff; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary gray */
+    --light-bg: #f8f9fa; /* Light background for pages */
+    --text-dark: #212529; /* Dark text */
+    --footer-bg: #343a40; /* Dark footer background */
+    --footer-text: #ffffff; /* White footer text */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-dark);
+    /* Ensure font size is readable (at least .75em is met by default Bootstrap font size,
+       but setting a base ensures consistency) */
+    font-size: 1em;
+    background-color: #ffffff; /* Default light background */
+}
+
+/* Proper use of spacing: Ensure no content leaks */
+.container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure Logo/Navbar Brand returns to home page */
+.navbar-brand {
+    cursor: pointer; /* Indicates it's clickable */
+}
+
+/* Homepage Specific Styles (index.html) */
+
+/* Homepage uses a slightly different background and specific card styling */
+body#home-page {
+    background-color: var(--light-bg); /* Lighter background for the homepage */
+}
+
+/* Using a custom class to make the homepage cards stand out */
+.home-card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for visual appeal */
+    border-radius: 0.5rem;
+    border: none;
+    height: 100%; /* For uniform height in the row */
+}
+
+.home-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.jumbotron-home {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Content & Image Styling */
+
+/* Float to wrap content around images */
+.float-right-image {
+    float: right;
+    margin: 0 0 15px 25px; /* Margin around the image */
+    max-width: 40%; /* Limits the size of the floating image */
+    height: auto;
+}
+
+/* Responsive Image styling (Bootstrap handles the core responsiveness with .img-fluid) */
+.img-fluid {
+    border-radius: 0.25rem;
+}
+
+/* Clear the float after the content */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- Footer Styling --- */
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsiveness (Media Query) */
+/* Adapting for a smaller sized mobile device (e.g., viewport width < 576px) */
+
+@media (max-width: 575.98px) {
+    /* For smaller screens, reduce jumbotron padding */
+    .jumbotron-home {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Stack cards vertically for better mobile viewing */
+    .home-card {
+        margin-bottom: 20px;
+    }
+
+    /* For floating images, make them full width on mobile so content doesn't get too cramped */
+    .float-right-image {
+        float: none;
+        max-width: 100%;
+        margin: 15px 0;
+        display: block;
+    }
+
+    /* Basic Menu bar responsiveness is handled automatically by the Bootstrap Navbar components
+       (Hamburger menu activates when needed) */
+}

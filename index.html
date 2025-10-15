@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 page -->
+
+<html lang="en">
+<!-- Start of the page, language is English -->
+
+<head>
+    <!-- Things that are not shown on the page but sets up the site -->
+
+    <meta charset="UTF-8">
+    <!-- Makes sure text shows correctly (like letters and symbols) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page look good on phones and tablets -->
+
+    <title>Home | LearnUX</title>
+    <!-- The title that shows in the browser tab -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh9qB6lD2Z9h2K6B6rR" 
+          crossorigin="anonymous">
+    <!-- Adds Bootstrap (pre-made styles and layout helpers) -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adds your own custom styles -->
+</head>
+
+<body id="home-page">
+<!-- Everything you see on the page goes inside the body -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Top navigation bar -->
+
+        <div class="container-fluid">
+        <!-- Makes sure navbar has proper spacing -->
+
+            <a class="navbar-brand" href="index.html">LearnUX</a>
+            <!-- The website name/logo -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Hamburger menu for mobile screens -->
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <!-- Links that collapse on small screens -->
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- List of links in the navbar -->
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <!-- Home page link -->
+
+                    <li class="nav-item dropdown">
+                    <!-- Dropdown menu for Learn UX/UI -->
+
+                        <a class="nav-link dropdown-toggle" href="learn.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn UX/UI</a>
+                        <!-- Click to open dropdown -->
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <!-- Dropdown items -->
+
+                            <li><a class="dropdown-item" href="learn.html">UX/UI Overview</a></li>
+                            <!-- First dropdown link -->
+
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- Divider line -->
+
+                            <li><a class="dropdown-item" href="ux.html">UX Basics</a></li>
+                            <!-- UX Basics page -->
+
+                            <li><a class="dropdown-item" href="ui.html">UI Basics</a></li>
+                            <!-- UI Basics page -->
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <!-- Resources page -->
+
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <!-- About page -->
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact page -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+    <!-- Main content area -->
+
+        <div class="jumbotron-home text-center">
+        <!-- Big intro section in the center -->
+
+            <h1>Welcome to LearnUX!</h1>
+            <!-- Main headline -->
+
+            <p class="lead">
+                LearnUX is your **beginner-friendly guide** to understanding User Experience (UX) and User Interface (UI) design...
+            </p>
+            <!-- Intro paragraph -->
+
+            <hr class="my-4">
+            <!-- Line to separate content -->
+
+            <p>
+                You’ll find easy-to-read lessons, helpful resources, and examples...
+            </p>
+            <!-- More details about the site -->
+
+            <a class="btn btn-light btn-lg" href="learn.html" role="button">Start Learning</a>
+            <!-- Button to go to Learn page -->
+        </div>
+
+        <h2 class="text-center mb-4">Explore Our Core Topics</h2>
+        <!-- Section heading -->
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Row with 1 column on small screens, 3 columns on medium -->
+
+            <div class="col">
+                <div class="card home-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn UX/UI</h5>
+                        <p class="card-text">Briefly explains the difference between UX and UI...</p>
+                        <a href="learn.html" class="btn btn-primary">See Overview</a>
+                    </div>
+                </div>
+            </div>
+            <!-- First topic card -->
+
+            <div class="col">
+                <div class="card home-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">UX Basics</h5>
+                        <p class="card-text">Explains key UX concepts like usability...</p>
+                        <a href="ux.html" class="btn btn-primary">Dive into UX</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Second topic card -->
+
+            <div class="col">
+                <div class="card home-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">UI Basics</h5>
+                        <p class="card-text">Focuses on interface design...</p>
+                        <a href="ui.html" class="btn btn-primary">Master UI</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Third topic card -->
+        </div>
+
+    </main>
+
+    <footer>
+    <!-- Footer area -->
+
+        <div class="container-fluid">
+        <!-- Full-width container -->
+
+            <p>© 2025 LearnUXUI. All rights reserved.</p>
+            <!-- Copyright -->
+
+            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <!-- Legal links -->
+
+            <p class="mt-2">LearnUXUI is an educational website for design learning purposes only.</p>
+            <!-- Disclaimer -->
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Loads Bootstrap JS so dropdowns, buttons, and nav toggle work -->
+</body>
+</html>
